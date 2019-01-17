@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel-AWS-Rekognition
                 </div>
 
                 <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <input type="file" name="photo">
+                    <input type="file" name="photo" accept="image/*" capture="environment">
                     <input type="submit">
                 </form>
 
@@ -98,6 +98,8 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <canvas></canvas>
+                <iframe id="result"></iframe>
             </div>
         </div>
     </body>

@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'CommonController@index')->name('index');
 Route::post('upload', 'CommonController@upload')->name('upload');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
